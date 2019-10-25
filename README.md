@@ -10,8 +10,8 @@ Animations coming soon.
 
 ## Installation
 
-- Launch the Command Pallete (Ctrl + Shift + P or Cmd + Shift + P) and type Extensions (or navigate from the sidebar to Extensions tab).
-- In search box type in "Scott Agirs" and choose the React Snippets by Scott Agirs
+- Launch the Command Pallete (Ctrl + Shift + P or ⌘Cmd + Shift + P) and type "Install Extensions" (or navigate from the sidebar to Extensions tab).
+- In search box type in "iJS" and choose the React NextJS Snippets by iJS
 - Install the extension (you may need to relaunch VS Code)
 - Get a coffee, a cookie and celebrate by writing some NextJS code more effeciently than ever!
 
