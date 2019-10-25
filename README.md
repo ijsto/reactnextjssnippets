@@ -63,11 +63,14 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 ## NextJS Router
 
-|    Trigger | Content                          |
-| ---------: | -------------------------------- |
-|   `imrtr→` | import Router                    |
-| `imrtrwr→` | import Router and withRouter HOC |
-| `imusrtr→` | import Router hook               |
+|    Trigger | Content                                                   |
+| ---------: | --------------------------------------------------------- |
+|   `imrtr→` | import Router                                             |
+|    `nrtr→` | Declare NextJS Router from useRouter                      |
+|  `nqprtr→` | Destructure NextJS query param from Router from useRouter |
+| `imrtrwr→` | import Router and withRouter HOC                          |
+| `imusrtr→` | import Router hook                                        |
+|  `nqprtr→` | Destructure NextJS query param from Router from useRouter |
 
 - More snippets to come, stay tuned!
 
@@ -231,12 +234,11 @@ import Link from 'next/link';
 
 ### nlnkpath - Use NextJS Link With Pathname
 
-    "body": [
-      "<Link href={{ pathname: \"${1}\", query: { queryName: queryValue } }}>",
-      "\t<a>",
-      "\t\t$0",
-      "\t</a>",
-      "</Link>"
+```javascript
+<Link href={{ pathname: |, query: { queryName: | } }}>
+  <a>|</a>
+</Link>
+```
 
 ### nlnkdyn - Use NextJS LinkTagWithDynmicRoute
 
@@ -250,6 +252,18 @@ import Link from 'next/link';
 
 ```javascript
 import Router from 'next/router';
+```
+
+### nrtr - NextJS Router from useRouter
+
+```javascript
+const router = useRouter();
+```
+
+### nqprtr - "NextJS query param from useRouter
+
+```javascript
+const { $1 } = router.query;
 ```
 
 ### imrtrwr - importNextRouterWithRouter
@@ -272,8 +286,11 @@ import { useRouter } from 'next/router';
 
 #### Snippets:
 
+- `uueff→` | useEffect snippet with empty second argument
 - `ncc→` | NextJS Class Component with State
 - `nc→` | NextJS Functional Component
+- `nrtr→` | Declare NextJS Router from useRouter
+- `nqprtr→` | Destructure NextJS query param from Router from useRouter
 
 #### Other:
 

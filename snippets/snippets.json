@@ -17,7 +17,7 @@
   },
   "React useState": {
     "prefix": "ust",
-    "body": "const [value, setValue] = useState(${1:INITIAL_VALUE});",
+    "body": "const [state, setState] = useState(${1:INITIAL_VALUE});",
     "description": "React 16.8+ useState"
   },
 
@@ -26,6 +26,12 @@
     "body": ["import { useEffect } from 'react';"],
     "description": "React 16.8+ useEffect import"
   },
+  "Use useEffect": {
+    "prefix": "uueff",
+    "body": ["useEffect(() => {$1, [$0]);"],
+    "description": "useEffect snippet with empty second argument"
+  },
+
   "Import { useContext }": {
     "prefix": "imctx",
     "body": ["import { useContext } from 'react';"],
@@ -34,7 +40,6 @@
   "React useContext": {
     "prefix": "uctx",
     "body": "const $0 = useContext(${1:CONTEXT_OBJECT});",
-
     "description": "React 16.8+ useContext"
   },
 
@@ -126,7 +131,7 @@
   },
   "Use NextJS Head": {
     "prefix": "nhd",
-    "body": ["<Head>", "\t${1}", "</Head>"],
+    "body": ["<Head>", "\t$1", "</Head>"],
     "description": "NextJS Head Tag"
   },
   "import NextJS Link": {
@@ -136,13 +141,13 @@
   },
   "Use NextJS Link": {
     "prefix": "nlnk",
-    "body": ["<Link href=\"${1}\">", "\t<a>", "\t\t$0", "\t</a>", "</Link>"],
+    "body": ["<Link href=\"$1\">", "\t<a>", "\t\t$0", "\t</a>", "</Link>"],
     "description": "NextJS Link Tag with <a>"
   },
   "Use NextJS Link With Pathname": {
     "prefix": "nlnkpath",
     "body": [
-      "<Link href={{ pathname: \"${1}\", query: { queryName: queryValue } }}>",
+      "<Link href={{ pathname: \"$1\", query: { queryName: queryValue } }}>",
       "\t<a>",
       "\t\t$0",
       "\t</a>",
@@ -153,7 +158,7 @@
   "Use NextJS LinkTagWithDynmicRoute": {
     "prefix": "nlnkdyn",
     "body": [
-      "<Link href=\"/[$1]\" as={`/{${2:SLUG_NAME}}`}>",
+      "<Link href=\"/[$1]\" as={`/${2:SLUG_NAME}`}>",
       "\t<a>",
       "\t\t$0",
       "\t</a>",
@@ -166,6 +171,16 @@
     "prefix": "imrtr",
     "body": "import Router from 'next/router';",
     "description": "NextJS Router import"
+  },
+  "NextJS Router from useRouter": {
+    "prefix": "nrtr",
+    "body": "const router = useRouter();",
+    "description": "Declare NextJS Router from useRouter"
+  },
+  "NextJS query param from useRouter": {
+    "prefix": "nqprtr",
+    "body": "const { $1 } = router.query;",
+    "description": "Destructure NextJS query param from Router from useRouter"
   },
   "importNextRouterWithRouter": {
     "prefix": "imrtrwr",
