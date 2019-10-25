@@ -71,73 +71,215 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 - More snippets to come, stay tuned!
 
+## Expanded Snippets
+
+### imr - Import React - if you must (NextJS imports React implicitly)
+
+```javascript
+import React from 'react';
+```
+
+### imrc - Import React, Component
+
+```javascript
+import { Component } from 'react';
+```
+
+### imst - Import { useState }
+
+```javascript
+import { useState } from 'react';
+```
+
+### ust - React useState
+
+```javascript
+  const [value, setValue] = useState(${1:INITIAL_VALUE});
+```
+
+### imeff - Import { useEffect }
+
+```javascript
+import { useEffect } from 'react';
+```
+
+### imctx - Import { useContext }
+
+```javascript
+import { useContext } from 'react';
+```
+
+### uctx - React useContext
+
+```javascript
+const $0 = useContext(${1:CONTEXT_OBJECT});';
+```
+
+### immem - Import { useMemo }
+
+```javascript
+import { useMemo } from 'react';
+```
+
+### imref - Import { useRef }
+
+```javascript
+import { useRef } from 'react';
+```
+
+### imimphan - imImport { useImperativeHandle }
+
+```javascript
+import { useImperativeHandle } from 'react';
+```
+
+### imlayeff - imImport { useLayoutEffect }
+
+```javascript
+import { useLayoutEffect } from 'react';
+```
+
+### imdebval - imImport { useDebugValue }
+
+```javascript
+import { useDebugValue } from 'react';
+```
+
+### imt - imImport PropTypes
+
+```javascript
+import PropTypes from 'prop-types';
+```
+
+### impt - Import PropTypes
+
+```javascript
+import PropTypes from 'prop-types';
+```
+
+### impc - Import PureComponent
+
+```javascript
+import React, { PureComponent } from 'react';
+```
+
+### cc - Class Component
+
+```javascript
+class | extends Component {
+  state = { | }
+
+  render() {
+    return ( | );
+  }
+}
+
+export default |;
+```
+
+### ccc - Class Component With Constructor
+
+```javascript
+class | extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { | }
+    }
+    render() {
+        return ( | );
+    }
+}
+
+export default |;
+```
+
+### sfc - Stateless Function Component
+
+```javascript
+const | = props => {
+  return ( | );
+};
+
+export default |;
+```
+
+### imhd - import NextJS Head
+
+```javascript
+import Head from 'next/head';
+```
+
+### nhd - Use NextJS Head
+
+```javascript
+<Head> | </Head>
+```
+
+### imlnk - import NextJS Link
+
+```javascript
+import Link from 'next/link';
+```
+
+### nlnk - Use NextJS Link
+
+```javascript
+<Link href="|">
+  <a>|</a>
+</Link>
+```
+
+### nlnkpath - Use NextJS Link With Pathname
+
+    "body": [
+      "<Link href={{ pathname: \"${1}\", query: { queryName: queryValue } }}>",
+      "\t<a>",
+      "\t\t$0",
+      "\t</a>",
+      "</Link>"
+
+### nlnkdyn - Use NextJS LinkTagWithDynmicRoute
+
+```javascript
+<Link href="/|" as={`/|`}>
+  <a>|</a>
+</Link>
+```
+
+### imrtr - importNextRouter
+
+```javascript
+import Router from 'next/router';
+```
+
+### imrtrwr - importNextRouterWithRouter
+
+```javascript
+import Router, { withRouter } from 'next/router';
+```
+
+### imusrtr - importNextUseRouter
+
+```javascript
+import { useRouter } from 'next/router';
+```
+
 ## Release Notes
 
-## [1.1.0] - 2019 October 24th
-
-- Work resumed.
-- Multiple changes, please check the snippets.
-
-## [1.0.2] - 2019 June 11th
+## [1.0.1] - 2019 October 25th 11th
 
 ### Added
-
-#### Snippet:
-
-- NextJS Link
-- `nlnkas→` | Next Link tag with <a>, `asPath` and `query`;
-
-## [1.0.2] - 2019 June 11th
-
-### Added
-
-#### Categories:
-
-- NextJS-specific Base Snippets
-- ReactJS-specific Base Snippets
-- ReactJS-specific Imports
-- NextJS-specific Imports
-- NextJS Tags
-- NextJS Router
-- NextJS Link
 
 #### Snippets:
 
 - `ncc→` | NextJS Class Component with State
 - `nc→` | NextJS Functional Component
 
-- `uctx→` | const context = useContext(contextName);
-- `ust→` | const [value, setValue] = useState(null);
+#### Other:
 
-- `imuctx→` | import { useContext } from 'react';
-- `imust→` | import { useState } from 'react';
+- Updated README with expanded Snippets
 
-- `imhd→` | import Head from 'next/head';
-- `imlnk→` | import Link from 'next/link';
-- `imrtr→` | import Router from 'next/head';
-- `imrtrwr→` | import Router, { withRouter } from 'next/head';
-
-- `nhd→` | Next Head tags;
-
-- `nlnk→` | Next Link tag with <a>;
-- `nlnkpath→` | Next Link tag with <a> and pathname;
-
-- `nrtr→` | const { router } = Router;
-- `nqry→` | const { query } = Router.router;
-- `npathn→` | const { pathname } = Router.router;
-
-## [1.0.1] - 2019 June 10th
-
-### Added
-
-- Snippet list to README
-- TypeScript, TypeScript React and Javascript support
-
-### (Minor) Bug Fixes
-
-- Relative path of the icon in `package.json`
-
-## [1.0.0] - 2019 June 10th
+## [1.0.0] - 2019 October 24th
 
 - Initial React Snippets by Scott Agirs Release
 
