@@ -206,7 +206,7 @@ const | = props => {
 export default |;
 ```
 
-### fcst - Functional Component without a state
+### fcst - Functional Component with a useState hook
 
 ```javascript
 import { useState } from 'react';
