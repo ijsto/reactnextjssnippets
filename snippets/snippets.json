@@ -112,7 +112,7 @@
     "description": "Class Component With Constructor"
   },
 
-  "Stateless Function Component": {
+  "Functional Component": {
     "prefix": "fc",
     "body": [
       "export const ${1:${TM_FILENAME_BASE}} = ($2) => {",
@@ -122,6 +122,22 @@
       "export default ${1:${TM_FILENAME_BASE}};"
     ],
     "description": "Functional Component"
+  },
+
+  "Functional Component with useState hook": {
+    "prefix": "fcst",
+    "body": [
+      "import { useState } from 'react';",
+      " ",
+      "export const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "const [value, setValue] = useState(${1:INITIAL_VALUE});",
+      " ",
+      "\treturn ( $0 );",
+      "}",
+      " ",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "Functional Component with useState hook"
   },
 
   "import NextJS Head": {

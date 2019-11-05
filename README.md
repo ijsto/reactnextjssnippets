@@ -115,7 +115,7 @@ import { useContext } from 'react';
 ### uctx - React useContext
 
 ```javascript
-const $0 = useContext(${1:CONTEXT_OBJECT});';
+const | = useContext(|);';
 ```
 
 ### immem - Import { useMemo }
@@ -196,10 +196,24 @@ class | extends React.Component {
 export default |;
 ```
 
-### sfc - Stateless Function Component
+### fc - Functional Component without a state
 
 ```javascript
 const | = props => {
+  return ( | );
+};
+
+export default |;
+```
+
+### fcst - Functional Component without a state
+
+```javascript
+import { useState } from 'react';
+
+const | = props => {
+  const [value, setValue] = useState(${1:INITIAL_VALUE});
+
   return ( | );
 };
 
@@ -280,7 +294,19 @@ import { useRouter } from 'next/router';
 
 ## Release Notes
 
-## [1.0.1] - 2019 October 25th 11th
+## [1.0.2] - 2019 November 5th
+
+### Added
+
+#### Snippets:
+
+- `fcst→` | Functional Component with a useState hook
+
+### Fix
+
+- Readme update
+
+## [1.0.1] - 2019 October 25th
 
 ### Added
 
