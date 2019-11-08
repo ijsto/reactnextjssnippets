@@ -145,6 +145,37 @@
     "body": "import Head from 'next/head';",
     "description": "NextJS Head import"
   },
+  "NextJS Get initial props outside Component": {
+    "prefix": "gip",
+    "body": [
+      "${1:${TM_FILENAME_BASE}}.getInitialProps = ({ req }) => {",
+      "\treturn $2",
+      "}"
+    ],
+    "description": "NextJS Get initial props outside Component"
+  },
+  "NextJS getInitialProps() inside Class Component": {
+    "prefix": "ccgip",
+    "body": ["static async getInitialProps() {", "\treturn { $1 };", "}"],
+    "description": "NextJS static async getInitialProps() inside Class Component"
+  },
+  "NextJS getInitialProps() expose query": {
+    "prefix": "ccgipaq",
+    "body": [
+      "static async getInitialProps({ Component, ctx }) {",
+      "  let pageProps = {};",
+      "  if (Component.getInitialProps) {",
+      "    pageProps = await Component.getInitialProps(ctx);",
+      "  }",
+      "",
+      "  pageProps.query = ctx.query;",
+      "  pageProps.asPath = ctx.asPath;",
+      "",
+      "  return { pageProps };",
+      "}"
+    ],
+    "description": "NextJS static async getInitialProps() withApollo() expose query and pageProps"
+  },
   "Use NextJS Head": {
     "prefix": "nhd",
     "body": ["<Head>", "\t$1", "</Head>"],

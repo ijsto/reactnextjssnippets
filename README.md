@@ -52,6 +52,14 @@ Below is a list of all available snippets and the triggers of each one. The **�
 | `imhd→` | import Head |
 |  `nhd→` | Use Head    |
 
+## NextJS getInitialProps()
+
+|  Trigger | Content                                            |
+| -------: | -------------------------------------------------- |
+|   `gip→` | getInitialProps() outside component                |
+| `ccgip→` | static getInitialProps() inside class component    |
+| `gipaq→` | NextJS getInitialProps() withApollo() expose query |
+
 ## NextJS Link
 
 |     Trigger | Content                           |
@@ -232,6 +240,36 @@ import Head from 'next/head';
 <Head> | </Head>
 ```
 
+### gip - getInitialProps() outside component
+
+```javascript
+|.getInitialProps = ({ req }) => {
+  return |
+}
+```
+
+### ccgip - getInitialProps() outside component
+
+```javascript
+static async getInitialProps() { return { | }; }
+```
+
+### gipaq - static getInitialProps() inside class component
+
+```javascript
+static async getInitialProps({ Component, ctx }) {",
+  let pageProps = {};
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+
+  pageProps.query = ctx.query;
+  pageProps.asPath = ctx.asPath;
+
+  return { pageProps };
+}
+```
+
 ### imlnk - import NextJS Link
 
 ```javascript
@@ -293,6 +331,16 @@ import { useRouter } from 'next/router';
 ```
 
 ## Release Notes
+
+## [1.0.3] - 2019 November 7th
+
+### Added
+
+#### Snippets:
+
+- `gip→` | getInitialProps() outside component
+- `ccgip→` | static getInitialProps() inside class component
+- `gipaq→` | NextJS getInitialProps() withApollo() expose query
 
 ## [1.0.2] - 2019 November 5th
 
