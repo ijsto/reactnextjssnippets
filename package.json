@@ -3,7 +3,7 @@
   "displayName": "React NextJS Snippets by iJS",
   "description": "React Snippets with hooks tailored for NextJS apps. By iJS",
   "publisher": "iJS",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/ijsto/reactnextjssnippets"
@@ -19,6 +19,18 @@
     "snippets": [
       {
         "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
         "path": "./snippets/snippets.json"
       }
     ]
