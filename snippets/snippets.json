@@ -150,30 +150,30 @@
     ],
     "description": "Functional Component with useState hook"
   },
-  "import NextJS Head": {
+  "import Next.js Head": {
     "prefix": "imhd",
     "body": "import Head from 'next/head';",
-    "description": "NextJS Head import"
+    "description": "Next.js Head import"
   },
-  "NextJS Get initial props outside Component": {
+  "Next.js Get initial props outside Component": {
     "prefix": "gip",
     "body": [
       "${1:${TM_FILENAME_BASE}}.getInitialProps = ({ req }) => {",
       "\treturn $2",
       "}"
     ],
-    "description": "NextJS Get initial props outside Component"
+    "description": "Next.js Get initial props outside Component"
   },
-  "NextJS getInitialProps() inside Class Component": {
+  "Next.js getInitialProps() inside Class Component": {
     "prefix": "ccgip",
     "body": [
       "static async getInitialProps() {",
       "\treturn { $1 };",
       "}"
     ],
-    "description": "NextJS static async getInitialProps() inside Class Component"
+    "description": "Next.js static async getInitialProps() inside Class Component"
   },
-  "NextJS getInitialProps() expose query": {
+  "Next.js getInitialProps() expose query": {
     "prefix": "ccgipaq",
     "body": [
       "static async getInitialProps({ Component, ctx }) {",
@@ -188,23 +188,23 @@
       "  return { pageProps };",
       "}"
     ],
-    "description": "NextJS static async getInitialProps() withApollo() expose query and pageProps"
+    "description": "Next.js static async getInitialProps() withApollo() expose query and pageProps"
   },
-  "Use NextJS Head": {
+  "Use Next.js Head": {
     "prefix": "nhd",
     "body": [
       "<Head>",
       "\t$1",
       "</Head>"
     ],
-    "description": "NextJS Head Tag"
+    "description": "Next.js Head Tag"
   },
-  "import NextJS Link": {
+  "import Next.js Link": {
     "prefix": "imlnk",
     "body": "import Link from 'next/link';",
-    "description": "NextJS Link import"
+    "description": "Next.js Link import"
   },
-  "Use NextJS Link": {
+  "Use Next.js Link": {
     "prefix": "nlnk",
     "body": [
       "<Link href=\"$1\">",
@@ -213,9 +213,9 @@
       "\t</a>",
       "</Link>"
     ],
-    "description": "NextJS Link Tag with <a>"
+    "description": "Next.js Link Tag with <a>"
   },
-  "Use NextJS Link With Pathname": {
+  "Use Next.js Link With Pathname": {
     "prefix": "nlnkpath",
     "body": [
       "<Link href={{ pathname: \"$1\", query: { queryName: queryValue } }}>",
@@ -224,9 +224,9 @@
       "\t</a>",
       "</Link>"
     ],
-    "description": "NextJS Link with Pathname"
+    "description": "Next.js Link with Pathname"
   },
-  "Use NextJS LinkTagWithDynmicRoute": {
+  "Use Next.js LinkTagWithDynmicRoute": {
     "prefix": "nlnkdyn",
     "body": [
       "<Link href=\"/[$1]\" as={`/${2:SLUG_NAME}`}>",
@@ -235,31 +235,31 @@
       "\t</a>",
       "</Link>"
     ],
-    "description": "NextJS Link Tag with Dynamic Route"
+    "description": "Next.js Link Tag with Dynamic Route"
   },
   "importNextRouter": {
     "prefix": "imrtr",
     "body": "import Router from 'next/router';",
-    "description": "NextJS Router import"
+    "description": "Next.js Router import"
   },
-  "NextJS Router from useRouter": {
+  "Next.js Router from useRouter": {
     "prefix": "nrtr",
     "body": "const router = useRouter();",
-    "description": "Declare NextJS Router from useRouter"
+    "description": "Declare Next.js Router from useRouter"
   },
-  "NextJS query param from useRouter": {
+  "Next.js query param from useRouter": {
     "prefix": "nqprtr",
     "body": "const { $1 } = router.query;",
-    "description": "Destructure NextJS query param from Router from useRouter"
+    "description": "Destructure Next.js query param from Router from useRouter"
   },
   "importNextRouterWithRouter": {
     "prefix": "imrtrwr",
     "body": "import Router, { withRouter } from 'next/router';",
-    "description": "NextJS Router and { withRouter } import"
+    "description": "Next.js Router and { withRouter } import"
   },
   "importNextUseRouter": {
     "prefix": "imusrtr",
     "body": "import { useRouter } from 'next/router';",
-    "description": "NextJS { useRouter } import"
+    "description": "Next.js { useRouter } import"
   }
 }

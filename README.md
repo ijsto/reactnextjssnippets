@@ -17,9 +17,9 @@ Animations coming soon.
 ## Installation
 
 - Launch the Command Pallete (Ctrl + Shift + P or ⌘Cmd + Shift + P) and type "Install Extensions" (or navigate from the sidebar to Extensions tab).
-- In search box type in "iJS" and choose the React NextJS Snippets by iJS
+- In search box type in "iJS" and choose the React Next.js Snippets by iJS
 - Install the extension (you may need to relaunch VS Code)
-- Get a coffee, a cookie and celebrate by writing some NextJS code more effeciently than ever!
+- Get a coffee, a cookie and celebrate by writing some Next.js code more effeciently than ever!
 
 ## Supported languages (file extensions)
 
@@ -51,22 +51,22 @@ Below is a list of all available snippets and the triggers of each one. The **�
 |      `ccc→` | Class Component With Constructor   |
 |       `fc→` | Functional Component               |
 
-## NextJS-specific Snippets
+## Next.js-specific Snippets
 
 | Trigger | Content     |
 | ------: | ----------- |
 | `imhd→` | import Head |
 |  `nhd→` | Use Head    |
 
-## NextJS getInitialProps()
+## Next.js getInitialProps()
 
 |  Trigger | Content                                            |
 | -------: | -------------------------------------------------- |
 |   `gip→` | getInitialProps() outside component                |
 | `ccgip→` | static getInitialProps() inside class component    |
-| `gipaq→` | NextJS getInitialProps() withApollo() expose query |
+| `gipaq→` | Next.js getInitialProps() withApollo() expose query |
 
-## NextJS Link
+## Next.js Link
 
 |     Trigger | Content                           |
 | ----------: | --------------------------------- |
@@ -75,22 +75,22 @@ Below is a list of all available snippets and the triggers of each one. The **�
 | `nlnkpath→` | Next Link tag with pathname;      |
 |  `nlnkdyn→` | Next Link tag with dynamic route; |
 
-## NextJS Router
+## Next.js Router
 
 |    Trigger | Content                                                   |
 | ---------: | --------------------------------------------------------- |
 |   `imrtr→` | import Router                                             |
-|    `nrtr→` | Declare NextJS Router from useRouter                      |
-|  `nqprtr→` | Destructure NextJS query param from Router from useRouter |
+|    `nrtr→` | Declare Next.js Router from useRouter                      |
+|  `nqprtr→` | Destructure Next.js query param from Router from useRouter |
 | `imrtrwr→` | import Router and withRouter HOC                          |
 | `imusrtr→` | import Router hook                                        |
-|  `nqprtr→` | Destructure NextJS query param from Router from useRouter |
+|  `nqprtr→` | Destructure Next.js query param from Router from useRouter |
 
 - More snippets to come, stay tuned!
 
 ## Expanded Snippets
 
-### imr - Import React - if you must (NextJS imports React implicitly)
+### imr - Import React - if you must (Next.js imports React implicitly)
 
 ```javascript
 import React from 'react';
@@ -234,13 +234,13 @@ const | = props => {
 export default |;
 ```
 
-### imhd - import NextJS Head
+### imhd - import Next.js Head
 
 ```javascript
 import Head from 'next/head';
 ```
 
-### nhd - Use NextJS Head
+### nhd - Use Next.js Head
 
 ```javascript
 <Head> | </Head>
@@ -276,13 +276,13 @@ static async getInitialProps({ Component, ctx }) {",
 }
 ```
 
-### imlnk - import NextJS Link
+### imlnk - import Next.js Link
 
 ```javascript
 import Link from 'next/link';
 ```
 
-### nlnk - Use NextJS Link
+### nlnk - Use Next.js Link
 
 ```javascript
 <Link href="|">
@@ -290,7 +290,7 @@ import Link from 'next/link';
 </Link>
 ```
 
-### nlnkpath - Use NextJS Link With Pathname
+### nlnkpath - Use Next.js Link With Pathname
 
 ```javascript
 <Link href={{ pathname: |, query: { queryName: | } }}>
@@ -298,7 +298,7 @@ import Link from 'next/link';
 </Link>
 ```
 
-### nlnkdyn - Use NextJS LinkTagWithDynmicRoute
+### nlnkdyn - Use Next.js LinkTagWithDynmicRoute
 
 ```javascript
 <Link href="/|" as={`/|`}>
@@ -312,13 +312,13 @@ import Link from 'next/link';
 import Router from 'next/router';
 ```
 
-### nrtr - NextJS Router from useRouter
+### nrtr - Next.js Router from useRouter
 
 ```javascript
 const router = useRouter();
 ```
 
-### nqprtr - "NextJS query param from useRouter
+### nqprtr - Next.js query param from useRouter
 
 ```javascript
 const { $1 } = router.query;
@@ -335,50 +335,3 @@ import Router, { withRouter } from 'next/router';
 ```javascript
 import { useRouter } from 'next/router';
 ```
-
-## Release Notes
-
-## [1.0.3] - 2019 November 7th
-
-### Added
-
-#### Snippets:
-
-- `gip→` | getInitialProps() outside component
-- `ccgip→` | static getInitialProps() inside class component
-- `gipaq→` | NextJS getInitialProps() withApollo() expose query
-
-## [1.0.2] - 2019 November 5th
-
-### Added
-
-#### Snippets:
-
-- `fcst→` | Functional Component with a useState hook
-
-### Fix
-
-- Readme update
-
-## [1.0.1] - 2019 October 25th
-
-### Added
-
-#### Snippets:
-
-- `uueff→` | useEffect snippet with empty second argument
-- `ncc→` | NextJS Class Component with State
-- `nc→` | NextJS Functional Component
-- `nrtr→` | Declare NextJS Router from useRouter
-- `nqprtr→` | Destructure NextJS query param from Router from useRouter
-
-#### Other:
-
-- Updated README with expanded Snippets
-
-## [1.0.0] - 2019 October 24th
-
-- Initial React Snippets by Scott Agirs Release
-
-**Enjoy!**
-/ S
