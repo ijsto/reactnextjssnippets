@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/ijsto/reactnextjssnippets"
   },
-  "icon": "images/logo01.png",
+  "icon": "images/logo02.png",
   "engines": {
     "vscode": "^1.35.0"
   },
