@@ -1,9 +1,9 @@
 {
   "name": "reactnextjssnippets",
-  "displayName": "React Next.js Snippets by iJS",
+  "displayName": "Next.js React Snippets by iJS",
   "description": "React Snippets (ES6) tailored for Next.js apps",
   "publisher": "iJS",
-  "version": "1.1.5",
+  "version": "1.2.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/ijsto/reactnextjssnippets"
