@@ -1,4 +1,4 @@
-<p align="center"><img width="368px" src="https://github.com/ijsto/reactnextjssnippets/blob/master/images/logo02.png"></p>
+<p align="center"><img width="368px" src="https://raw.githubusercontent.com/ijsto/reactnextjssnippets/master/images/logo02.png"></p>
 <p align="center">
 <a href="https://marketplace.visualstudio.com/items?itemName=iJS.reactnextjssnippets"><img src="https://vsmarketplacebadge.apphb.com/installs-short/iJS.reactnextjssnippets.svg?style=for-the-badge&colorA=85bf00&colorB=679400&label=DOWNLOADS"/></a> <a href="https://code.visualstudio.com/updates/v1_25"><img src="https://vsmarketplacebadge.apphb.com/rating-star/iJS.reactnextjssnippets.svg?style=for-the-badge&colorA=38B8F0&colorB=3726A6"/></a> 
 <a href="https://ijs.to"><img src="https://img.shields.io/badge/Learn%20JavaScript-iJS.to%E2%86%92-gray.svg?colorA=B838F0&colorB=8721C3&style=for-the-badge"/></a>
