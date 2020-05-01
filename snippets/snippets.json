@@ -1,18 +1,23 @@
 {
   "Import React": {
     "prefix": "imr",
-    "body": ["import React from 'react';"],
+    "body": [
+      "import React from 'react';"
+    ],
     "description": "Import React - if you must."
   },
   "Import { Component }": {
     "prefix": "imrc",
-    "body": ["import { Component } from 'react';"],
+    "body": [
+      "import { Component } from 'react';"
+    ],
     "description": "Import { Component }"
   },
-
   "Import { useState }": {
     "prefix": "imst",
-    "body": ["import { useState } from 'react';"],
+    "body": [
+      "import { useState } from 'react';"
+    ],
     "description": "React 16.8+ useState import"
   },
   "React useState": {
@@ -20,21 +25,25 @@
     "body": "const [state, setState] = useState(${1:INITIAL_VALUE});",
     "description": "React 16.8+ useState"
   },
-
   "Import { useEffect }": {
     "prefix": "imeff",
-    "body": ["import { useEffect } from 'react';"],
+    "body": [
+      "import { useEffect } from 'react';"
+    ],
     "description": "React 16.8+ useEffect import"
   },
   "Use useEffect": {
     "prefix": "uueff",
-    "body": ["useEffect(() => {$1, [$0]);"],
+    "body": [
+      "useEffect(() => {$1, [$0]);"
+    ],
     "description": "useEffect snippet with empty second argument"
   },
-
   "Import { useContext }": {
     "prefix": "imctx",
-    "body": ["import { useContext } from 'react';"],
+    "body": [
+      "import { useContext } from 'react';"
+    ],
     "description": "React 16.8+ useContext import"
   },
   "React useContext": {
@@ -42,43 +51,48 @@
     "body": "const $0 = useContext(${1:CONTEXT_OBJECT});",
     "description": "React 16.8+ useContext"
   },
-
   "Import { useMemo }": {
     "prefix": "immem",
-    "body": ["import { useMemo } from 'react';"],
+    "body": [
+      "import { useMemo } from 'react';"
+    ],
     "description": "React 16.8+ useMemo import"
   },
-
   "Import { useRef }": {
     "prefix": "imref",
-    "body": ["import { useRef } from 'react';"],
+    "body": [
+      "import { useRef } from 'react';"
+    ],
     "description": "React 16.8+ useRef import"
   },
-
   "Import { useImperativeHandle }": {
     "prefix": "imimphan",
-    "body": ["import { useImperativeHandle } from 'react';"],
+    "body": [
+      "import { useImperativeHandle } from 'react';"
+    ],
     "description": "React 16.8+ useImperativeHandle import"
   },
-
   "Import { useLayoutEffect }": {
     "prefix": "imlayeff",
-    "body": ["import { useLayoutEffect } from 'react';"],
+    "body": [
+      "import { useLayoutEffect } from 'react';"
+    ],
     "description": "React 16.8+ useLayoutEffect import"
   },
-
   "Import { useDebugValue }": {
     "prefix": "imdebval",
-    "body": ["import { useDebugValue } from 'react';"],
+    "body": [
+      "import { useDebugValue } from 'react';"
+    ],
     "description": "React 16.8+ useDebugValue import"
   },
-
   "Import PropTypes": {
     "prefix": "imt",
-    "body": ["import PropTypes from 'prop-types';"],
+    "body": [
+      "import PropTypes from 'prop-types';"
+    ],
     "description": "Import PropTypes"
   },
-
   "Class Component": {
     "prefix": "cc",
     "body": [
@@ -93,7 +107,6 @@
     ],
     "description": "Class Component"
   },
-
   "Class Component With Constructor": {
     "prefix": "ccc",
     "body": [
@@ -111,11 +124,10 @@
     ],
     "description": "Class Component With Constructor"
   },
-
   "Functional Component": {
     "prefix": "fc",
     "body": [
-      "export const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
       "\treturn ( $0 );",
       "}",
       " ",
@@ -123,13 +135,12 @@
     ],
     "description": "Functional Component"
   },
-
   "Functional Component with useState hook": {
     "prefix": "fcst",
     "body": [
       "import { useState } from 'react';",
       " ",
-      "export const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
       "const [value, setValue] = useState(${1:INITIAL_VALUE});",
       " ",
       "\treturn ( $0 );",
@@ -139,7 +150,6 @@
     ],
     "description": "Functional Component with useState hook"
   },
-
   "import NextJS Head": {
     "prefix": "imhd",
     "body": "import Head from 'next/head';",
@@ -156,7 +166,11 @@
   },
   "NextJS getInitialProps() inside Class Component": {
     "prefix": "ccgip",
-    "body": ["static async getInitialProps() {", "\treturn { $1 };", "}"],
+    "body": [
+      "static async getInitialProps() {",
+      "\treturn { $1 };",
+      "}"
+    ],
     "description": "NextJS static async getInitialProps() inside Class Component"
   },
   "NextJS getInitialProps() expose query": {
@@ -178,7 +192,11 @@
   },
   "Use NextJS Head": {
     "prefix": "nhd",
-    "body": ["<Head>", "\t$1", "</Head>"],
+    "body": [
+      "<Head>",
+      "\t$1",
+      "</Head>"
+    ],
     "description": "NextJS Head Tag"
   },
   "import NextJS Link": {
@@ -188,7 +206,13 @@
   },
   "Use NextJS Link": {
     "prefix": "nlnk",
-    "body": ["<Link href=\"$1\">", "\t<a>", "\t\t$0", "\t</a>", "</Link>"],
+    "body": [
+      "<Link href=\"$1\">",
+      "\t<a>",
+      "\t\t$0",
+      "\t</a>",
+      "</Link>"
+    ],
     "description": "NextJS Link Tag with <a>"
   },
   "Use NextJS Link With Pathname": {
@@ -213,7 +237,6 @@
     ],
     "description": "NextJS Link Tag with Dynamic Route"
   },
-
   "importNextRouter": {
     "prefix": "imrtr",
     "body": "import Router from 'next/router';",
