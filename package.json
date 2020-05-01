@@ -1,14 +1,14 @@
 {
   "name": "reactnextjssnippets",
   "displayName": "React NextJS Snippets by iJS",
-  "description": "React Snippets with hooks tailored for NextJS apps. By iJS",
+  "description": "React Snippets (ES6) tailored for Next.js apps",
   "publisher": "iJS",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/ijsto/reactnextjssnippets"
   },
-  "icon": "images/logo02.png",
+  "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.35.0"
   },
