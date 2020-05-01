@@ -15,6 +15,14 @@
   "categories": [
     "Snippets"
   ],
+  "keywords": [
+    "VSCode",
+    "Snippets",
+    "React",
+    "React Snippets",
+    "Nextjs",
+    "Nextjs Snippets"
+  ],
   "contributes": {
     "snippets": [
       {
