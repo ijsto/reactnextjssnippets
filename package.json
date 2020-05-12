@@ -3,7 +3,7 @@
   "displayName": "Next.js React Snippets by iJS",
   "description": "React Snippets (ES6) tailored for Next.js apps",
   "publisher": "iJS",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/ijsto/reactnextjssnippets"
@@ -15,6 +15,7 @@
   "categories": [
     "Snippets"
   ],
+  "author": "(Scott) Agirs Neminskis <scott@ijs.to>",
   "keywords": [
     "VSCode",
     "Snippets",
