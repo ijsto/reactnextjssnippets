@@ -32,24 +32,26 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 ## Must have React Snippets
 
-|     Trigger | Content                            |
-| ----------: | ---------------------------------- |
-|      `imr→` | Explicitely import React           |
-|     `imrc→` | Import React { Component }         |
-|     `imst→` | (16.8+) useState import            |
-|      `ust→` | Use (16.8+) useState hook          |
-|    `imeff→` | (16.8+) useEffect import           |
-|    `imctx→` | (16.8+) useContext import          |
-|     `uctx→` | Use React useContext hook          |
-|    `immem→` | (16.8+) useMemo import             |
-|    `imref→` | (16.8+) useRef import              |
-| `imimphan→` | (16.8+) useImperativeHandle import |
-| `imlayeff→` | (16.8+) useLayoutEffect import     |
-| `imdebval→` | (16.8+) useDebugValue import       |
-|      `imt→` | Import PropTypes                   |
-|        `cc` | Class Component                    |
-|      `ccc→` | Class Component With Constructor   |
-|       `fc→` | Functional Component               |
+|     Trigger | Content                                  |
+| ----------: | ---------------------------------------- |
+|      `imr→` | Explicitely import React                 |
+|     `imrc→` | Import React { Component }               |
+|     `imst→` | (16.8+) useState import                  |
+|      `ust→` | Use (16.8+) useState hook                |
+|    `imeff→` | (16.8+) useEffect import                 |
+|    `imctx→` | (16.8+) useContext import                |
+|     `uctx→` | Use React useContext hook                |
+|    `immem→` | (16.8+) useMemo import                   |
+|    `imref→` | (16.8+) useRef import                    |
+| `imimphan→` | (16.8+) useImperativeHandle import       |
+| `imlayeff→` | (16.8+) useLayoutEffect import           |
+| `imdebval→` | (16.8+) useDebugValue import             |
+|      `imt→` | Import PropTypes                         |
+|        `cc` | Class Component                          |
+|      `ccc→` | Class Component With Constructor         |
+|       `fc→` | Functional Component                     |
+|      `fce→` | Functional Component as named export     |
+|     `fcde→` | Functional Component with default export |
 
 ## Next.js-specific Snippets
 
@@ -60,10 +62,10 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 ## Next.js getInitialProps()
 
-|  Trigger | Content                                            |
-| -------: | -------------------------------------------------- |
-|   `gip→` | getInitialProps() outside component                |
-| `ccgip→` | static getInitialProps() inside class component    |
+|  Trigger | Content                                             |
+| -------: | --------------------------------------------------- |
+|   `gip→` | getInitialProps() outside component                 |
+| `ccgip→` | static getInitialProps() inside class component     |
 | `gipaq→` | Next.js getInitialProps() withApollo() expose query |
 
 ## Next.js Link
@@ -77,13 +79,13 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 ## Next.js Router
 
-|    Trigger | Content                                                   |
-| ---------: | --------------------------------------------------------- |
-|   `imrtr→` | import Router                                             |
+|    Trigger | Content                                                    |
+| ---------: | ---------------------------------------------------------- |
+|   `imrtr→` | import Router                                              |
 |    `nrtr→` | Declare Next.js Router from useRouter                      |
 |  `nqprtr→` | Destructure Next.js query param from Router from useRouter |
-| `imrtrwr→` | import Router and withRouter HOC                          |
-| `imusrtr→` | import Router hook                                        |
+| `imrtrwr→` | import Router and withRouter HOC                           |
+| `imusrtr→` | import Router hook                                         |
 |  `nqprtr→` | Destructure Next.js query param from Router from useRouter |
 
 - More snippets to come, stay tuned!
@@ -93,19 +95,19 @@ Below is a list of all available snippets and the triggers of each one. The **�
 ### imr - Import React - if you must (Next.js imports React implicitly)
 
 ```javascript
-import React from 'react';
+import React from "react";
 ```
 
 ### imrc - Import React, Component
 
 ```javascript
-import { Component } from 'react';
+import { Component } from "react";
 ```
 
 ### imst - Import { useState }
 
 ```javascript
-import { useState } from 'react';
+import { useState } from "react";
 ```
 
 ### ust - React useState
@@ -117,13 +119,13 @@ import { useState } from 'react';
 ### imeff - Import { useEffect }
 
 ```javascript
-import { useEffect } from 'react';
+import { useEffect } from "react";
 ```
 
 ### imctx - Import { useContext }
 
 ```javascript
-import { useContext } from 'react';
+import { useContext } from "react";
 ```
 
 ### uctx - React useContext
@@ -135,49 +137,49 @@ const | = useContext(|);';
 ### immem - Import { useMemo }
 
 ```javascript
-import { useMemo } from 'react';
+import { useMemo } from "react";
 ```
 
 ### imref - Import { useRef }
 
 ```javascript
-import { useRef } from 'react';
+import { useRef } from "react";
 ```
 
 ### imimphan - imImport { useImperativeHandle }
 
 ```javascript
-import { useImperativeHandle } from 'react';
+import { useImperativeHandle } from "react";
 ```
 
 ### imlayeff - imImport { useLayoutEffect }
 
 ```javascript
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect } from "react";
 ```
 
 ### imdebval - imImport { useDebugValue }
 
 ```javascript
-import { useDebugValue } from 'react';
+import { useDebugValue } from "react";
 ```
 
 ### imt - imImport PropTypes
 
 ```javascript
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 ```
 
 ### impt - Import PropTypes
 
 ```javascript
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 ```
 
 ### impc - Import PureComponent
 
 ```javascript
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from "react";
 ```
 
 ### cc - Class Component
@@ -237,7 +239,7 @@ export default |;
 ### imhd - import Next.js Head
 
 ```javascript
-import Head from 'next/head';
+import Head from "next/head";
 ```
 
 ### nhd - Use Next.js Head
@@ -279,7 +281,7 @@ static async getInitialProps({ Component, ctx }) {",
 ### imlnk - import Next.js Link
 
 ```javascript
-import Link from 'next/link';
+import Link from "next/link";
 ```
 
 ### nlnk - Use Next.js Link
@@ -309,7 +311,7 @@ import Link from 'next/link';
 ### imrtr - importNextRouter
 
 ```javascript
-import Router from 'next/router';
+import Router from "next/router";
 ```
 
 ### nrtr - Next.js Router from useRouter
@@ -327,11 +329,11 @@ const { $1 } = router.query;
 ### imrtrwr - importNextRouterWithRouter
 
 ```javascript
-import Router, { withRouter } from 'next/router';
+import Router, { withRouter } from "next/router";
 ```
 
 ### imusrtr - importNextUseRouter
 
 ```javascript
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 ```
