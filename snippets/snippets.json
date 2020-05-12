@@ -129,11 +129,29 @@
     "body": [
       "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
       "\treturn ( $0 );",
+      "}"
+    ],
+    "description": "Functional Component"
+  },
+  "Functional Component Export": {
+    "prefix": "fce",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "\treturn ( $0 );",
+      "}"
+    ],
+    "description": "Functional Component as named export"
+  },
+  "Functional Component Default Export": {
+    "prefix": "fcde",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = ($2) => {",
+      "\treturn ( $0 );",
       "}",
       " ",
       "export default ${1:${TM_FILENAME_BASE}};"
     ],
-    "description": "Functional Component"
+    "description": "Functional Component with default export"
   },
   "Functional Component with useState hook": {
     "prefix": "fcst",
