@@ -34,7 +34,7 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 |     Trigger | Content                            |
 | ----------: | ---------------------------------- |
-|      `imr→` | Explicitely import React           |
+|      `imr→` | Explicitly import React           |
 |     `imrc→` | Import React { Component }         |
 |     `imst→` | (16.8+) useState import            |
 |      `ust→` | Use (16.8+) useState hook          |
