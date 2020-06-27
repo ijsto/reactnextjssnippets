@@ -296,6 +296,39 @@ static async getInitialProps({ Component, ctx }) {",
 }
 ```
 
+### gsp - exports getStaticProps()
+
+```javascript
+export async function getStaticProps(context) {
+  return {
+    props: { | }, // will be passed to the page component as props
+  }
+}
+```
+
+### gspaths - exports getStaticPaths()
+
+```javascript
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { | } } // See https://nextjs.org/docs/basic-features/data-fetching#the-paths-key-required
+    ],
+    fallback: | // See https://nextjs.org/docs/basic-features/data-fetching#fallback-true
+  };
+}
+```
+
+### gssp - exports getServerSideProps()
+
+```javascript
+export async function getServerSideProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}
+```
+
 ### imlnk - import Next.js Link
 
 ```javascript
