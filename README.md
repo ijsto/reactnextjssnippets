@@ -68,6 +68,24 @@ Below is a list of all available snippets and the triggers of each one. The **�
 | `ccgip→` | static getInitialProps() inside class component     |
 | `gipaq→` | Next.js getInitialProps() withApollo() expose query |
 
+## Next.js getStaticProps()
+
+| Trigger | Content                  |
+| ------: | ------------------------ |
+|  `gsp→` | exports getStaticProps() |
+
+## Next.js getServerSideProps()
+
+| Trigger | Content                      |
+| ------: | ---------------------------- |
+| `gssp→` | exports getServerSideProps() |
+
+## Next.js getStaticPaths()
+
+|    Trigger | Content                  |
+| ---------: | ------------------------ |
+| `gspaths→` | exports getStaticPaths() |
+
 ## Next.js Link
 
 |     Trigger | Content                           |
