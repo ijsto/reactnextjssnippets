@@ -174,7 +174,7 @@
     ],
     "description": "Next.js getStaticProps() export"
   },
-  "Next.js getStaticProps() export": {
+  "Next.js getStaticPaths() export": {
     "prefix": "gspaths",
     "body": [
       "export async function getStaticPaths() {",
