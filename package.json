@@ -36,11 +36,11 @@
       },
       {
         "language": "typescript",
-        "path": "./snippets/snippets.json"
+        "path": "./snippets/snippets-ts.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./snippets/snippets.json"
+        "path": "./snippets/snippets-ts.json"
       }
     ]
   }
