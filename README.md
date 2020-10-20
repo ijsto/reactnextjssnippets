@@ -34,11 +34,12 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 |     Trigger | Content                                  |
 | ----------: | ---------------------------------------- |
-|      `imr→` | Explicitely import React                 |
+|      `imr→` | Explicitly import React                  |
 |     `imrc→` | Import React { Component }               |
 |     `imst→` | (16.8+) useState import                  |
 |      `ust→` | Use (16.8+) useState hook                |
 |    `imeff→` | (16.8+) useEffect import                 |
+|    `uueff→` | use useEffect                            |
 |    `imctx→` | (16.8+) useContext import                |
 |     `uctx→` | Use React useContext hook                |
 |    `immem→` | (16.8+) useMemo import                   |
@@ -52,6 +53,7 @@ Below is a list of all available snippets and the triggers of each one. The **�
 |       `fc→` | Functional Component                     |
 |      `fce→` | Functional Component as named export     |
 |     `fcde→` | Functional Component with default export |
+|     `fcst→` | Functional Component with useState Hook  |
 
 ## Next.js-specific Snippets
 
@@ -62,11 +64,11 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 ## Next.js getInitialProps()
 
-|  Trigger | Content                                             |
-| -------: | --------------------------------------------------- |
-|   `gip→` | getInitialProps() outside component                 |
-| `ccgip→` | static getInitialProps() inside class component     |
-| `gipaq→` | Next.js getInitialProps() withApollo() expose query |
+|    Trigger | Content                                            |
+| ---------: | -------------------------------------------------- |
+|     `gip→` | getInitialProps() outside component                |
+|   `ccgip→` | static getInitialProps() inside class component    |
+| `ccgipaq→` | static getInitialProps() withApollo() expose query |
 
 ## Next.js getStaticProps()
 
@@ -104,7 +106,6 @@ Below is a list of all available snippets and the triggers of each one. The **�
 |  `nqprtr→` | Destructure Next.js query param from Router from useRouter |
 | `imrtrwr→` | import Router and withRouter HOC                           |
 | `imusrtr→` | import Router hook                                         |
-|  `nqprtr→` | Destructure Next.js query param from Router from useRouter |
 
 - More snippets to come, stay tuned!
 
@@ -233,9 +234,25 @@ export default |;
 ### fc - Functional Component without a state
 
 ```javascript
-const | = props => {
+const | = (|) => {
   return ( | );
-};
+}
+```
+
+### fce - Functional Component as named export
+
+```javascript
+export const | = (|) => {
+  return ( | );
+}
+```
+
+### fcde Functional Component with default export
+
+```javascript
+const | = (|) => {
+  return ( | );
+}
 
 export default |;
 ```
@@ -280,10 +297,10 @@ import Head from "next/head";
 static async getInitialProps() { return { | }; }
 ```
 
-### gipaq - static getInitialProps() inside class component
+### ccgipaq - static getInitialProps() withApollo() expose query
 
 ```javascript
-static async getInitialProps({ Component, ctx }) {",
+static async getInitialProps({ Component, ctx }) {
   let pageProps = {};
   if (Component.getInitialProps) {
     pageProps = await Component.getInitialProps(ctx);
@@ -324,7 +341,7 @@ export async function getStaticPaths() {
 ```javascript
 export async function getServerSideProps(context) {
   return {
-    props: {}, // will be passed to the page component as props
+    props: { | }, // will be passed to the page component as props
   };
 }
 ```
@@ -388,6 +405,5 @@ import Router, { withRouter } from "next/router";
 ```javascript
 import { useRouter } from "next/router";
 ```
-
 
 [iJS.to](https://ijs.to)
