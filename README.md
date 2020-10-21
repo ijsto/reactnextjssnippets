@@ -72,21 +72,28 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 ## Next.js getStaticProps()
 
-| Trigger | Content                  |
-| ------: | ------------------------ |
-|  `gsp→` | exports getStaticProps() |
+|    Trigger | Content                        |
+| ---------: | ------------------------------ |
+|     `gsp→` | exports getStaticProps()       |
+|    `imgsp` | import GetStaticProps type     |
+| `iminfgsp` | import InferGetStaticPropsType |
+|  `ninfgsp` | use InferGetStaticPropsType    |
 
 ## Next.js getServerSideProps()
 
-| Trigger | Content                      |
-| ------: | ---------------------------- |
-| `gssp→` | exports getServerSideProps() |
+|      Trigger | Content                             |
+| -----------: | ----------------------------------- |
+|      `gssp→` | exports getServerSideProps()        |
+|    `imgvsp→` | imports GetServerSideProps type     |
+| `iminfgvsp→` | imports InferGetServerSidePropsType |
+|  `ninfgvsp→` | use InferGetServerSidePropsType     |
 
 ## Next.js getStaticPaths()
 
-|    Trigger | Content                  |
-| ---------: | ------------------------ |
-| `gspaths→` | exports getStaticPaths() |
+|      Trigger | Content                  |
+| -----------: | ------------------------ |
+|   `gspaths→` | exports getStaticPaths() |
+| `imgspaths→` | import GetStaticPaths    |
 
 ## Next.js Link
 
@@ -283,10 +290,30 @@ import Head from "next/head";
 <Head> | </Head>
 ```
 
+### imgsp - import Next.js GetStaticProps type
+
+```typescript
+import { GetStaticProps } from "next";
+```
+
+### iminfgsp - import Next.js InferGetStaticPropsType
+
+```typescript
+import { InferGetStaticPropsType } from "next";
+```
+
+### ninfgsp - import Next.js InferGetStaticPropsType
+
+```typescript
+function |({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+      return |
+      }
+```
+
 ### gip - getInitialProps() outside component
 
 ```javascript
-|.getInitialProps = ({ req }) => {
+|.getInitialProps = async ({ req }) => {
   return |
 }
 ```
@@ -323,6 +350,14 @@ export async function getStaticProps(context) {
 }
 ```
 
+```typescript
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: { | } // will be passed to the page component as props
+  };
+}
+```
+
 ### gspaths - exports getStaticPaths()
 
 ```javascript
@@ -336,6 +371,17 @@ export async function getStaticPaths() {
 }
 ```
 
+```typescript
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [
+      { params: { | } }
+    ],
+    fallback: |
+  };
+}
+```
+
 ### gssp - exports getServerSideProps()
 
 ```javascript
@@ -344,6 +390,35 @@ export async function getServerSideProps(context) {
     props: { | }, // will be passed to the page component as props
   };
 }
+```
+
+```typescript
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: { | },
+  };
+}
+```
+
+### imgvsp - import Next.js GetServerSideProps type
+
+```typescript
+import { GetServerSideProps } from "next";
+```
+
+### iminfgvsp - import Next.js InferGetServerSidePropsType type
+
+```typescript
+import { InferGetServerSidePropsType } from "next";
+```
+
+### ninfgvsp - use Next.js InferGetServerSidePropsType type
+
+```typescript
+
+function |({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+      return |
+      }
 ```
 
 ### imlnk - import Next.js Link
