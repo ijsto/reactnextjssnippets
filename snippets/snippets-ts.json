@@ -149,10 +149,29 @@
     "body": "import Head from 'next/head';",
     "description": "Next.js Head import"
   },
+  "import Next.js GetStaticProps type": {
+    "prefix": "imgsp",
+    "body": "import { GetStaticProps } from 'next';",
+    "description": "Next.js GetStaticProps type import"
+  },
+  "import Next.js InferGetStaticPropsType": {
+    "prefix": "iminfgsp",
+    "body": "import { InferGetStaticPropsType } from 'next'",
+    "description": "Next.js InferGetStaticPropsType import"
+  },
+  "use Next.js InferGetStaticPropsType": {
+    "prefix": "ninfgsp",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {",
+      "\treturn $2",
+      "}"
+    ],
+    "description": "use InferGetStaticPropsType snippet"
+  },
   "Next.js Get initial props outside Component": {
     "prefix": "gip",
     "body": [
-      "${1:${TM_FILENAME_BASE}}.getInitialProps = ({ req }) => {",
+      "${1:${TM_FILENAME_BASE}}.getInitialProps = async ({ req }) => {",
       "\treturn $2",
       "}"
     ],
@@ -166,7 +185,7 @@
   "Next.js getStaticProps() export": {
     "prefix": "gsp",
     "body": [
-      "export async function getStaticProps(context) {",
+      "export const getStaticProps: GetStaticProps = async (context) => {",
       "\treturn {",
       "\t\tprops: {$1}",
       "\t};",
@@ -177,7 +196,7 @@
   "Next.js getStaticPaths() export": {
     "prefix": "gspaths",
     "body": [
-      "export async function getStaticPaths() {",
+      "export const getStaticPaths: GetStaticPaths = async () => {",
       "\treturn {",
       "\t\tpaths: [",
       "\t\t\t{ params: { $1 }}",
@@ -188,16 +207,40 @@
     ],
     "description": "Next.js pre-renders all the static paths https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation"
   },
+  "import Next.js GetStaticPaths type": {
+    "prefix": "imgspaths",
+    "body": "import { GetStaticPaths } from 'next'",
+    "description": "Next.js GetStaticPaths type import"
+  },
   "Next.js getServerSideProps() export": {
     "prefix": "gssp",
     "body": [
-      "export async function getServerSideProps(context) {",
+      "export const getServerSideProps: GetServerSideProps = async (context) => {",
       "\treturn {",
       "\t\tprops: {$1}",
       "\t};",
       "}"
     ],
     "description": "Next.js getServerSideProps() export https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering"
+  },
+  "import Next.js GetServerSideProps type": {
+    "prefix": "imgvsp",
+    "body": "import { GetServerSideProps } from 'next'",
+    "description": "Next.js GetServerSideProps type import"
+  },
+  "import Next.js InferGetServerSidePropsType": {
+    "prefix": "iminfgvsp",
+    "body": "import { InferGetServerSidePropsType } from 'next'",
+    "description": "Next.js InferGetServerSidePropsType import"
+  },
+  "use Next.js InferGetServerSidePropsType": {
+    "prefix": "ninfgvsp",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {",
+      "\treturn $2",
+      "}"
+    ],
+    "description": "use InferGetServerSidePropsType snippet"
   },
   "Next.js getInitialProps() expose query": {
     "prefix": "ccgipaq",

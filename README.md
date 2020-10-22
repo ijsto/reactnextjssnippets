@@ -34,11 +34,12 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 |     Trigger | Content                                  |
 | ----------: | ---------------------------------------- |
-|      `imr→` | Explicitely import React                 |
+|      `imr→` | Explicitly import React                  |
 |     `imrc→` | Import React { Component }               |
 |     `imst→` | (16.8+) useState import                  |
 |      `ust→` | Use (16.8+) useState hook                |
 |    `imeff→` | (16.8+) useEffect import                 |
+|    `uueff→` | use useEffect                            |
 |    `imctx→` | (16.8+) useContext import                |
 |     `uctx→` | Use React useContext hook                |
 |    `immem→` | (16.8+) useMemo import                   |
@@ -52,6 +53,7 @@ Below is a list of all available snippets and the triggers of each one. The **�
 |       `fc→` | Functional Component                     |
 |      `fce→` | Functional Component as named export     |
 |     `fcde→` | Functional Component with default export |
+|     `fcst→` | Functional Component with useState Hook  |
 
 ## Next.js-specific Snippets
 
@@ -62,29 +64,36 @@ Below is a list of all available snippets and the triggers of each one. The **�
 
 ## Next.js getInitialProps()
 
-|  Trigger | Content                                             |
-| -------: | --------------------------------------------------- |
-|   `gip→` | getInitialProps() outside component                 |
-| `ccgip→` | static getInitialProps() inside class component     |
-| `gipaq→` | Next.js getInitialProps() withApollo() expose query |
+|    Trigger | Content                                            |
+| ---------: | -------------------------------------------------- |
+|     `gip→` | getInitialProps() outside component                |
+|   `ccgip→` | static getInitialProps() inside class component    |
+| `ccgipaq→` | static getInitialProps() withApollo() expose query |
 
 ## Next.js getStaticProps()
 
-| Trigger | Content                  |
-| ------: | ------------------------ |
-|  `gsp→` | exports getStaticProps() |
+|    Trigger | Content                        |
+| ---------: | ------------------------------ |
+|     `gsp→` | exports getStaticProps()       |
+|    `imgsp` | import GetStaticProps type     |
+| `iminfgsp` | import InferGetStaticPropsType |
+|  `ninfgsp` | use InferGetStaticPropsType    |
 
 ## Next.js getServerSideProps()
 
-| Trigger | Content                      |
-| ------: | ---------------------------- |
-| `gssp→` | exports getServerSideProps() |
+|      Trigger | Content                             |
+| -----------: | ----------------------------------- |
+|      `gssp→` | exports getServerSideProps()        |
+|    `imgvsp→` | imports GetServerSideProps type     |
+| `iminfgvsp→` | imports InferGetServerSidePropsType |
+|  `ninfgvsp→` | use InferGetServerSidePropsType     |
 
 ## Next.js getStaticPaths()
 
-|    Trigger | Content                  |
-| ---------: | ------------------------ |
-| `gspaths→` | exports getStaticPaths() |
+|      Trigger | Content                  |
+| -----------: | ------------------------ |
+|   `gspaths→` | exports getStaticPaths() |
+| `imgspaths→` | import GetStaticPaths    |
 
 ## Next.js Link
 
@@ -104,7 +113,6 @@ Below is a list of all available snippets and the triggers of each one. The **�
 |  `nqprtr→` | Destructure Next.js query param from Router from useRouter |
 | `imrtrwr→` | import Router and withRouter HOC                           |
 | `imusrtr→` | import Router hook                                         |
-|  `nqprtr→` | Destructure Next.js query param from Router from useRouter |
 
 - More snippets to come, stay tuned!
 
@@ -233,9 +241,25 @@ export default |;
 ### fc - Functional Component without a state
 
 ```javascript
-const | = props => {
+const | = (|) => {
   return ( | );
-};
+}
+```
+
+### fce - Functional Component as named export
+
+```javascript
+export const | = (|) => {
+  return ( | );
+}
+```
+
+### fcde Functional Component with default export
+
+```javascript
+const | = (|) => {
+  return ( | );
+}
 
 export default |;
 ```
@@ -266,10 +290,30 @@ import Head from "next/head";
 <Head> | </Head>
 ```
 
+### imgsp - import Next.js GetStaticProps type
+
+```typescript
+import { GetStaticProps } from "next";
+```
+
+### iminfgsp - import Next.js InferGetStaticPropsType
+
+```typescript
+import { InferGetStaticPropsType } from "next";
+```
+
+### ninfgsp - import Next.js InferGetStaticPropsType
+
+```typescript
+function |({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+      return |
+      }
+```
+
 ### gip - getInitialProps() outside component
 
 ```javascript
-|.getInitialProps = ({ req }) => {
+|.getInitialProps = async ({ req }) => {
   return |
 }
 ```
@@ -280,10 +324,10 @@ import Head from "next/head";
 static async getInitialProps() { return { | }; }
 ```
 
-### gipaq - static getInitialProps() inside class component
+### ccgipaq - static getInitialProps() withApollo() expose query
 
 ```javascript
-static async getInitialProps({ Component, ctx }) {",
+static async getInitialProps({ Component, ctx }) {
   let pageProps = {};
   if (Component.getInitialProps) {
     pageProps = await Component.getInitialProps(ctx);
@@ -306,6 +350,14 @@ export async function getStaticProps(context) {
 }
 ```
 
+```typescript
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: { | } // will be passed to the page component as props
+  };
+}
+```
+
 ### gspaths - exports getStaticPaths()
 
 ```javascript
@@ -319,14 +371,54 @@ export async function getStaticPaths() {
 }
 ```
 
+```typescript
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [
+      { params: { | } }
+    ],
+    fallback: |
+  };
+}
+```
+
 ### gssp - exports getServerSideProps()
 
 ```javascript
 export async function getServerSideProps(context) {
   return {
-    props: {}, // will be passed to the page component as props
+    props: { | }, // will be passed to the page component as props
   };
 }
+```
+
+```typescript
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: { | },
+  };
+}
+```
+
+### imgvsp - import Next.js GetServerSideProps type
+
+```typescript
+import { GetServerSideProps } from "next";
+```
+
+### iminfgvsp - import Next.js InferGetServerSidePropsType type
+
+```typescript
+import { InferGetServerSidePropsType } from "next";
+```
+
+### ninfgvsp - use Next.js InferGetServerSidePropsType type
+
+```typescript
+
+function |({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+      return |
+      }
 ```
 
 ### imlnk - import Next.js Link
@@ -388,6 +480,5 @@ import Router, { withRouter } from "next/router";
 ```javascript
 import { useRouter } from "next/router";
 ```
-
 
 [iJS.to](https://ijs.to)
