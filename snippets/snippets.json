@@ -277,5 +277,20 @@
     "prefix": "imusrtr",
     "body": "import { useRouter } from 'next/router';",
     "description": "Next.js { useRouter } import"
+  },
+  "Use sized Next Image component": {
+    "prefix": "nimg",
+    "body": "<Image src=\"$1\" width=\"$1\" height=\"$1\" alt=\"$1\">",
+    "description": "Use sized Next Image component"
+  },
+  "Use unsized Next Image component": {
+    "prefix": "nuimg",
+    "body": "<Image src=\"$1\" unsized=\"$1\" alt=\"$1\">",
+    "description": "Use sized Next Image component"
+  },
+  "Import Next Image component": {
+    "prefix": "imimg",
+    "body": "import Image from 'next/image';",
+    "description": "Next.js 10 Image component import"
   }
 }
