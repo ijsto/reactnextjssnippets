@@ -55,14 +55,7 @@ Below is a list of all available snippets and the triggers of each one. The **�
 |     `fcde→` | Functional Component with default export |
 |     `fcst→` | Functional Component with useState Hook  |
 
-## Next.js-specific Snippets
-
-| Trigger | Content     |
-| ------: | ----------- |
-| `imhd→` | import Head |
-|  `nhd→` | Use Head    |
-
-## Next.js getInitialProps()
+## Next.js `getInitialProps()`
 
 |    Trigger | Content                                            |
 | ---------: | -------------------------------------------------- |
@@ -70,7 +63,7 @@ Below is a list of all available snippets and the triggers of each one. The **�
 |   `ccgip→` | static getInitialProps() inside class component    |
 | `ccgipaq→` | static getInitialProps() withApollo() expose query |
 
-## Next.js getStaticProps()
+## Next.js `getStaticProps()`
 
 |    Trigger | Content                        |
 | ---------: | ------------------------------ |
@@ -79,7 +72,7 @@ Below is a list of all available snippets and the triggers of each one. The **�
 | `iminfgsp` | import InferGetStaticPropsType |
 |  `ninfgsp` | use InferGetStaticPropsType    |
 
-## Next.js getServerSideProps()
+## Next.js `getServerSideProps()`
 
 |      Trigger | Content                             |
 | -----------: | ----------------------------------- |
@@ -88,14 +81,29 @@ Below is a list of all available snippets and the triggers of each one. The **�
 | `iminfgvsp→` | imports InferGetServerSidePropsType |
 |  `ninfgvsp→` | use InferGetServerSidePropsType     |
 
-## Next.js getStaticPaths()
+## Next.js `getStaticPaths()`
 
 |      Trigger | Content                  |
 | -----------: | ------------------------ |
 |   `gspaths→` | exports getStaticPaths() |
 | `imgspaths→` | import GetStaticPaths    |
 
-## Next.js Link
+## Next.js `Head />`
+
+| Trigger | Content     |
+| ------: | ----------- |
+| `imhd→` | import Head |
+|  `nhd→` | Use Head    |
+
+## Next.js `Image />`
+
+|  Trigger | Content           |
+| -------: | ----------------- |
+| `imimg→` | import Image      |
+|  `nimg→` | Use sized image   |
+| `nuimg→` | Use unsized image |
+
+## Next.js `Link />`
 
 |     Trigger | Content                           |
 | ----------: | --------------------------------- |
@@ -104,7 +112,7 @@ Below is a list of all available snippets and the triggers of each one. The **�
 | `nlnkpath→` | Next Link tag with pathname;      |
 |  `nlnkdyn→` | Next Link tag with dynamic route; |
 
-## Next.js Router
+## Next.js `Router />`
 
 |    Trigger | Content                                                    |
 | ---------: | ---------------------------------------------------------- |
@@ -425,6 +433,18 @@ function |({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {
 
 ```javascript
 import Link from "next/link";
+```
+
+### nimg - Use Sized Next.js image
+
+```javascript
+<Image alt="|" src="|" width="|" height="|" />
+```
+
+### nuimg - Use unsized Next.js image
+
+```javascript
+<Image alt="|" src="|" width="|" unsized />
 ```
 
 ### nlnk - Use Next.js Link
